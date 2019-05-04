@@ -18,6 +18,7 @@ struct user
 		char year[4];
 	};
 	char *cmnd;
+	char *address;
 	char gender; // M/F/?
 	bool activated;
 	int role;
