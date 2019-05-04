@@ -4,6 +4,7 @@
 #include "conio.h"
 #include "stdio.h"
 #include "string.h"
+#include "stdlib.h"
 #include <iostream>
 struct user
 {
@@ -16,13 +17,13 @@ struct user
 		char month[2];
 		char year[4];
 	};
-	char cmnd[9];
+	char *cmnd;
 	char gender; // M/F/?
 	bool activated;
 	int role;
 	// -1 = admin
 	// 0 = quan ly
-	// 1 = chuyen vien
+	// 1 = nhan vien
 };
 struct member
 {
@@ -34,7 +35,7 @@ struct member
 		char month[2];
 		char year[4];
 	};
-	char cmnd[9];
+	char *cmnd;
 	char gender; // M/F/?
 	char *email;
 	char *address;
@@ -85,5 +86,8 @@ struct borrowSlip
 	};
 	char *borrowList; // init -> assign isbn
 };
+void getPassword(char *pw);
+void getUsername(char *user);
+user getPersonal_Infor();
 int login();
 #endif //PCH_H
