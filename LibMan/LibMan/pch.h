@@ -5,18 +5,15 @@
 #include "stdio.h"
 #include "string.h"
 #include "stdlib.h"
+#include "time.h"
 #include <iostream>
+
 struct user
 {
 	char *username;
 	char *hashpw;
 	char *name;
-	struct dob
-	{
-		char date[2];
-		char month[2];
-		char year[4];
-	};
+	tm dob;
 	char *cmnd;
 	char *address;
 	char gender; // M/F/?
@@ -30,28 +27,14 @@ struct member
 {
 	char libraryId[9];
 	char *name;
-	struct dob
-	{
-		char date[2];
-		char month[2];
-		char year[4];
-	};
+	tm dob;
 	char *cmnd;
 	char gender; // M/F/?
 	char *email;
 	char *address;
-	struct doc // ngay lap the
-	{
-		char date[2];
-		char month[2];
-		char year[4];
-	};
-	struct expDate // ngay het han
-	{
-		char date[2];
-		char month[2];
-		char year[4];
-	};
+	tm doc; // ngay lap the
+	tm expDate; // ngay het han
+	
 };
 struct book
 {
@@ -59,7 +42,7 @@ struct book
 	char *title;
 	char *author;
 	char *publisher;
-	char year[4];
+	char *year;
 	char *gerne;
 	char *rack;
 	unsigned int copies; // so quyen sach;
@@ -67,28 +50,26 @@ struct book
 struct borrowSlip
 {
 	char libraryId[9];
-	struct borrowDate
-	{
-		char date[2];
-		char month[2];
-		char year[4];
-	};
-	struct expectedReturnDate
-	{
-		char date[2];
-		char month[2];
-		char year[4];
-	};
-	struct actualReturnDate
-	{
-		char date[2];
-		char month[2];
-		char year[4];
-	};
+	tm borrowDate;	
+	tm expectedReturnDate;
+	tm actualReturnDate;
 	char *borrowList; // init -> assign isbn
 };
+
+//Funcget
 void getPassword(char *pw);
 void getUsername(char *user);
 user getPersonal_Infor();
+//FuncTime
+tm GetTime(char *input);
+char* TimetoStr(tm time);
+//Func
 int login();
+
+//FuncUser
+
+//FuncBook
+book GetBookInfor(FILE *f);
+void PrintBookInfor(book BookInfor);
+
 #endif //PCH_H

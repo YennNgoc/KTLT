@@ -155,9 +155,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1.5.CreateUser.cpp" />
+    <ClCompile Include="3.1.BookList.cpp" />
+    <ClCompile Include="3.2.AddBook.cpp" />
+    <ClCompile Include="3.6.Search_Title.cpp" />
+    <ClCompile Include="Get_BookInfor.cpp" />
     <ClCompile Include="interface.cpp" />
     <ClCompile Include="LibMan.cpp" />
-    <ClCompile Include="pch.cpp">
+    <ClCompile Include="Gettime.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -165,6 +169,7 @@
     </ClCompile>
     <ClCompile Include="1.1.login.cpp" />
     <ClCompile Include="1.4.update.cpp" />
+    <ClCompile Include="3.5.Search_ISBN.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
