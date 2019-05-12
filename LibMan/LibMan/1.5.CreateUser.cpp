@@ -25,20 +25,16 @@ user CreateUser()
 }
 void SaveInfor(user User)
 {
-	FILE *f = fopen("DSNguoiDung.txt", "wt");
+	FILE *f = fopen("DSNguoiDung.csv", "a+");
 	if (f == NULL)
 	{
 		printf("Loi cap nhat!!!");
 	}
 	else
 	{
-		fputs(User.username, f);
-		fputs(User.hashpw, f);
-		fputs(User.name, f);
-		// day of birth
-		fputs(User.cmnd, f);
-		fputs(User.address, f);
-		fprintf(f, "%c", User.gender);
+		char* dob = TimetoStr(User.dob);
+		printf("Tao nguoi dung thanh cong!");
+		fprintf(f, "%s;%s;%s;%s;%s;%s;%c", User.username, User.hashpw, User.name, dob, User.cmnd, User.address, User.gender);
 		fclose(f);
 	}
 }

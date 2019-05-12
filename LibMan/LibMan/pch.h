@@ -70,6 +70,9 @@ int login();
 
 //FuncBook
 book GetBookInfor(FILE *f);
+book AddBookInfor();
 void PrintBookInfor(book BookInfor);
-
+book Search_Title();
+void Add_Book(book Add)
+void Del_Book(book Del);
 #endif //PCH_H

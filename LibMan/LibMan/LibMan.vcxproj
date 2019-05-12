@@ -154,9 +154,14 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="1.1.Login.cpp" />
+    <ClCompile Include="1.4.Update.cpp" />
     <ClCompile Include="1.5.CreateUser.cpp" />
+    <ClCompile Include="1.6.DecentraliseUser.cpp" />
     <ClCompile Include="3.1.BookList.cpp" />
     <ClCompile Include="3.2.AddBook.cpp" />
+    <ClCompile Include="3.3.EditBookInfor.cpp" />
+    <ClCompile Include="3.4. DelBook.cpp" />
     <ClCompile Include="3.6.Search_Title.cpp" />
     <ClCompile Include="Get_BookInfor.cpp" />
     <ClCompile Include="interface.cpp" />
@@ -167,8 +172,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="1.1.login.cpp" />
-    <ClCompile Include="1.4.update.cpp" />
     <ClCompile Include="3.5.Search_ISBN.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

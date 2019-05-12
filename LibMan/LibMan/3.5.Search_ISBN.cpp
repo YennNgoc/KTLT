@@ -12,7 +12,7 @@ void Search_ISBN()
 	else
 	{
 		printf("\t\t\t[Tim sach theo ISBN]\n");
-		printf("Nhap ISBN sach can tim: ");
+		printf("Nhap ISBN sach: ");
 		char *ISBN = new char[13];
 		bool check = false;
 		gets_s(ISBN, 15);

@@ -1,7 +1,8 @@
 #include "pch.h"
 
-void Search_ISBN()
+book Search_Title()
 {
+	printf("\t\t\t[Tim sach theo Ten]\n");
 	book Get;
 	int i = 1;
 	FILE *f = fopen("DSSach.csv", "r");
@@ -11,11 +12,10 @@ void Search_ISBN()
 	}
 	else
 	{
-		printf("\t\t\t[Tim sach theo ISBN]\n");
-		printf("Nhap ISBN sach can tim: ");
-		char *Title = new char[13];
+		printf("Nhap Ten sach: ");
+		char *Title = new char[100];
 		bool check = false;
-		gets_s(Title, 15);
+		gets_s(Title, 110);
 		printf("->Ket qua: \n");
 		while (!feof(f))
 		{
@@ -33,4 +33,5 @@ void Search_ISBN()
 			printf("Khong co cuon sach nay trong kho!\n");
 	}
 	fclose(f);
+	return Get;
 }

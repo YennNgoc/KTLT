@@ -7,6 +7,9 @@ user getPersonal_Infor()
 	User.address = new char(30);
 	printf("Ten: ");
 	gets_s(User.name, 30);
+	char* dob = new char[10];
+	gets_s(dob, 15);
+	User.dob = GetTime(dob);
 	printf("Gioi tinh( Nam:M / Nu:F / Khac:? ):");
 	scanf("%c", &User.gender);
 	printf("CMND: ");

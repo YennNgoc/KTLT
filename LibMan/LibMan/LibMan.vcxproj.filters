@@ -29,12 +29,6 @@
     <ClCompile Include="1.5.CreateUser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="1.1.login.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="1.4.update.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Gettime.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -51,6 +45,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="3.6.Search_Title.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="1.6.DecentraliseUser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="1.1.Login.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="1.4.Update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3.4. DelBook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3.3.EditBookInfor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
