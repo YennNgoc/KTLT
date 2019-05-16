@@ -163,6 +163,11 @@
     <ClCompile Include="3.3.EditBookInfor.cpp" />
     <ClCompile Include="3.4. DelBook.cpp" />
     <ClCompile Include="3.6.Search_Title.cpp" />
+    <ClCompile Include="5.ReturnSlip.cpp" />
+    <ClCompile Include="6.1.NumOfBook.cpp" />
+    <ClCompile Include="6.2.NumOfBook_Genre.cpp" />
+    <ClCompile Include="4.BorrowSlip.cpp" />
+    <ClCompile Include="GetBorrowSlip.cpp" />
     <ClCompile Include="Get_BookInfor.cpp" />
     <ClCompile Include="interface.cpp" />
     <ClCompile Include="LibMan.cpp" />

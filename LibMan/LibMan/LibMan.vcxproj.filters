@@ -62,5 +62,20 @@
     <ClCompile Include="3.3.EditBookInfor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="6.1.NumOfBook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="6.2.NumOfBook_Genre.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="5.ReturnSlip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="4.BorrowSlip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GetBorrowSlip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
