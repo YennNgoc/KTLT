@@ -65,10 +65,11 @@ struct book
 struct borrowSlip
 {
 	char libraryId[9];
+	char *borrowList; // init -> assign isbn
 	tm borrowDate;
 	tm expectedReturnDate;
 	tm actualReturnDate;
-	char *borrowList; // init -> assign isbn
+	
 };
 
 //Funcget
@@ -91,5 +92,7 @@ book GetBookInfor(FILE *f);
 book AddBookInfor();
 void PrintBookInfor(book BookInfor);
 book Search_Title();
+char* Get_ISBN();
+bool Search_ISBN(char* ISBN);
 void Add_Book(book Add);
 void Del_Book(book Del);

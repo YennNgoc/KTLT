@@ -1,6 +1,6 @@
 #include "pch.h"
 
-void Search_ISBN()
+bool Search_ISBN()
 {
 	book Get;
 	int i = 1;
@@ -11,7 +11,7 @@ void Search_ISBN()
 	}
 	else
 	{
-		printf("\t\t\t[Tim sach theo ISBN]\n");
+		printf("\t\t\t[Tim sach theo ISBN]\n"); // Xong thi bo nay vo ham chay ctr
 		printf("Nhap ISBN sach: ");
 		char *ISBN = new char[13];
 		bool check = false;
@@ -30,7 +30,12 @@ void Search_ISBN()
 			}
 		}
 		if (check == false)
+		{
 			printf("Khong co cuon sach nay trong kho!\n");
+			return false;
+		}
+			
 	}
 	fclose(f);
+	return true;
 }
