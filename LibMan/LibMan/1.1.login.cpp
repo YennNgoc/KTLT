@@ -37,7 +37,7 @@ int login() {
 
 	// authentication
 
-	// call appropriate interface based on user role
+	// call interface, pass user struct
 
 	return 1;
 }

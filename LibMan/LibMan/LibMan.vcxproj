@@ -158,11 +158,14 @@
     <ClCompile Include="1.4.Update.cpp" />
     <ClCompile Include="1.5.CreateUser.cpp" />
     <ClCompile Include="1.6.DecentraliseUser.cpp" />
+    <ClCompile Include="2.1.listSubscriber.cpp" />
+    <ClCompile Include="2.2.AddSubscriber.cpp" />
     <ClCompile Include="3.1.BookList.cpp" />
     <ClCompile Include="3.2.AddBook.cpp" />
     <ClCompile Include="3.3.EditBookInfor.cpp" />
     <ClCompile Include="3.4. DelBook.cpp" />
     <ClCompile Include="3.6.Search_Title.cpp" />
+    <ClCompile Include="subMan.cpp" />
     <ClCompile Include="Get_BookInfor.cpp" />
     <ClCompile Include="interface.cpp" />
     <ClCompile Include="LibMan.cpp" />

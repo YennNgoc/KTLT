@@ -4,8 +4,7 @@ book GetBookInfor(FILE *f)
 {
 	book BookInfor;
 	char *Book = new char[290];
-	char *coppies = new char(5);
-
+	char *copies = new char(5);
 	fgets(Book, 300, f);
 	strcpy(BookInfor.isbn, strtok(Book, ";"));
 	BookInfor.title = strtok(NULL, ";");
@@ -14,9 +13,10 @@ book GetBookInfor(FILE *f)
 	BookInfor.year = strtok(NULL, ";");
 	BookInfor.gerne = strtok(NULL, ";");
 	BookInfor.rack = strtok(NULL, ";");
-	coppies = strtok(NULL, "\n");
-	BookInfor.copies = atoi(coppies);
-	
+	copies = strtok(NULL, "\n");
+	BookInfor.copies = atoi(copies);
+	delete(Book);
+	delete(copies);
 	return BookInfor;
 }
 

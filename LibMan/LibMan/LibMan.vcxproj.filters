@@ -62,5 +62,14 @@
     <ClCompile Include="3.3.EditBookInfor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="2.1.listSubscriber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="2.2.AddSubscriber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subMan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

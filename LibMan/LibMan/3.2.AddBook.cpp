@@ -1,5 +1,5 @@
 #include "pch.h"
-
+// cach goi: Add_Book(AddBookInfor());
 book AddBookInfor()
 {
 	book BookInfor;
@@ -45,4 +45,9 @@ void Add_Book(book Add)
 	}
 	fclose(f);
 	printf("Them sach thanh cong!");
+	delete(Add.title);
+	delete(Add.author);
+	delete(Add.publisher);
+	delete(Add.gerne);
+	delete(Add.rack);
 }

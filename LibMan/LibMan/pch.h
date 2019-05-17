@@ -1,19 +1,35 @@
-#ifndef PCH_H
-#define PCH_H
+#pragma once
+#define _XOPEN_SOURCE 700
+#define _GNU_SOURCE 1
 #define _CRT_SECURE_NO_WARNINGS
-#include "conio.h"
-#include "stdio.h"
+#include <conio.h>
+#include <stdio.h>
 #include "string.h"
 #include "stdlib.h"
 #include "time.h"
+#include <Windows.h>
 #include <iostream>
+#include <iomanip>
+#include <sstream>
+
+extern "C" char* strptime(const char* s,
+	const char* f,
+	struct tm* tm) {
+	std::istringstream input(s);
+	input.imbue(std::locale(setlocale(LC_ALL, nullptr)));
+	input >> std::get_time(tm, f);
+	if (input.fail()) {
+		return nullptr;
+	}
+	return (char*)(s + input.tellg());
+}
 
 struct user
 {
 	char *username;
 	char *hashpw;
 	char *name;
-	tm dob;
+	tm * dob;
 	char *cmnd;
 	char *address;
 	char gender; // M/F/?
@@ -23,18 +39,17 @@ struct user
 	// 0 = quan ly
 	// 1 = nhan vien
 };
-struct member
+struct subscriber
 {
 	char libraryId[9];
 	char *name;
-	tm dob;
+	tm * dob;
 	char *cmnd;
-	char gender; // M/F/?
+	char *gender; // M/F/O
 	char *email;
 	char *address;
-	tm doc; // ngay lap the
-	tm expDate; // ngay het han
-	
+	tm * doc; // ngay lap the
+	tm * expDate; // ngay het han
 };
 struct book
 {
@@ -50,7 +65,7 @@ struct book
 struct borrowSlip
 {
 	char libraryId[9];
-	tm borrowDate;	
+	tm borrowDate;
 	tm expectedReturnDate;
 	tm actualReturnDate;
 	char *borrowList; // init -> assign isbn
@@ -67,12 +82,14 @@ char* TimetoStr(tm time);
 int login();
 
 //FuncUser
-
+subscriber getSubInfo(FILE *f);
+void printSubInfo(subscriber subInfo);
+subscriber addSubInfo();
+void addSub(subscriber subInfo);
 //FuncBook
 book GetBookInfor(FILE *f);
 book AddBookInfor();
 void PrintBookInfor(book BookInfor);
 book Search_Title();
-void Add_Book(book Add)
+void Add_Book(book Add);
 void Del_Book(book Del);
-#endif //PCH_H
